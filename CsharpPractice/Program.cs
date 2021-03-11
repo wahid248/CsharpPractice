@@ -10,7 +10,7 @@ namespace CsharpPractice
         {
             var cars = GetCars();
             var customers = GetCustomers();
-            var customerToCar = GetToCustomerToCarMapping();
+            var customerToCar = GetCustomerToCarMapping();
 
             var ownedCars = cars.Where(c => customerToCar.Values.Contains(c.Key)).ToList();
 
@@ -44,7 +44,7 @@ namespace CsharpPractice
             };
         }
 
-        public static Dictionary<int, int> GetToCustomerToCarMapping()
+        public static Dictionary<int, int> GetCustomerToCarMapping()
         {
             return new Dictionary<int, int>
             {
